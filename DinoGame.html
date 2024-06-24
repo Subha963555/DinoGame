@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dino.css">
+    <script src="dino.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="gamesection">
+        <div class="dino">
+
+        </div>
+        <div class="mons monsani" ></div>
+        <div class="scoreCon"><b>SCORE IS:-</b></div>
+        <div class="gameover">Game-Over</div>
+    </div>
+    <script>
+        window.addEventListener('keydown', (e) => {
+            if (e.keyCode == 38) {
+                auel.play()
+                let dino = document.querySelector('.dino'); 
+                dino.classList.add('animdino'); 
+                setTimeout(() => {
+                    dino.classList.remove('animdino');
+                }, 600);
+            }
+        });
+        window.addEventListener('keydown', (e) => {
+    if (e.keyCode == 39) {
+        let dino = document.querySelector('.dino');
+        let dinoStyle = window.getComputedStyle(dino, null);
+        let dinoLeft = parseInt(dinoStyle.getPropertyValue('left'));
+
+        dino.style.left = (dinoLeft + 100) + "px";
+    }
+});
+window.addEventListener('keydown', (e) => {
+    if (e.keyCode == 37) {
+        let dino = document.querySelector('.dino');
+        let dinoStyle = window.getComputedStyle(dino, null);
+        let dinoright = parseInt(dinoStyle.getPropertyValue('right'));
+
+        dino.style.left = (dinoright + 100) + "px";
+    }
+});
+
+    </script>
+    
+</body>
+</html>

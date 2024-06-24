@@ -1,6 +1,6 @@
 let score = 0;
 let cro = true;
-auel=new Audio('Maan Meri Jaan_320(PagalWorld.com.pe).mp3');
+auel=new Audio('auel.mp3');
 setInterval(() => {
     let dino = document.querySelector('.dino');
     let gameover = document.querySelector('.gameover');
@@ -14,7 +14,6 @@ setInterval(() => {
 
     let offx = Math.abs(dx - mx);
     let offy = Math.abs(dy - my);
-
     if (offx < 93 && offy < 52) {
         gameover.style.visibility = 'visible';
         mons.classList.remove('monsani');
